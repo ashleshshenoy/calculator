@@ -9,33 +9,33 @@
   <body>
       <div class="calculator">
             <div class="calculator-display">
-                        <div id="previous-result ">
-                            <p>23</p>
+                        <div>
+                            <p  id="previous-result"></p>
                         </div>
-                        <div id="result">
-                            <p>23+23</p>
+                        <div >
+                            <p id="result"></p>
                         </div>
             </div>
 
 
             <div class="calculator-button-div">
                       <button  onclick="clearAll()"  class="double-span optr"  style="color: green ;" type="button" name="button">AC</button>
-                      <button class="optr" style="color: red" type="button" name="button">DEL</button>
+                      <button onclick="deleteElement()"class="optr" style="color: red" type="button" name="button">DEL</button>
                       <button class="optr"  type="button" name="button">/</button>
-                      <button type="button" name="button">1</button>
-                      <button type="button" name="button">2</button>
-                      <button  type="button" name="button">3</button>
-                      <button class="optr" type="button" name="button">*</button>
-                      <button type="button" name="button">4</button>
-                      <button type="button" name="button">5</button>
-                      <button type="button" name="button">6</button>
-                      <button class="optr"  type="button" name="button">+</button>
-                      <button type="button" name="button">7</button>
-                      <button type="button" name="button">8</button>
-                      <button type="button" name="button">9</button>
+                      <button onclick="putElement(1)" type="button" name="button">1</button>
+                      <button onclick="putElement(2)" type="button" name="button">2</button>
+                      <button  onclick="putElement(3)" type="button" name="button">3</button>
+                      <button  class="optr" type="button" name="button">*</button>
+                      <button onclick="putElement(4)" type="button" name="button">4</button>
+                      <button onclick="putElement(5)" type="button" name="button">5</button>
+                      <button onclick="putElement(6)" type="button" name="button">6</button>
+                      <button onclick="solver('+')" class="optr"   type="button" name="button">+</button>
+                      <button onclick="putElement(7)" type="button" name="button">7</button>
+                      <button onclick="putElement(8)" type="button" name="button">8</button>
+                      <button onclick="putElement(9)" type="button" name="button">9</button>
                       <button class="optr"  type="button" name="button">-</button>
                       <button class="optr"  type="button" name="button">.</button>
-                      <button type="button" name="button">0</button>
+                      <button onclick="putElement(0)" type="button" name="button">0</button>
                       <button class="optr double-span"  type="button" name="button">=</button>
 
             </div>
