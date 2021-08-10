@@ -35,16 +35,16 @@ function getAnswer(){
 
   }
 
-  while(/[+ -]/.test(e))
+  while(/[+ - ]/.test(e))
   {
-      var pos = e.search(/[+ -]/d);
-      if( e.match(/[+ -]/) =="+" ){
+      var pos = e.search(/[+ - ]/d);
+      if( e.match(/[+ - ]/) =="+" ){
             ans= Number(e[pos-1])+Number(e[pos+1]);
             e = e.slice( 0,pos-1) + ans + e.slice(pos+2,e.length);
             }
         else{
-          ans= Number(e[pos-1])-Number(e[pos+1]);
-          e = e.slice( 0,pos-1) + ans + e.slice(pos+2,e.length);
+          ans= Number(e[pos-1]) - Number(e[pos+1]);
+          e = e.slice( 0,pos-1) + String(ans) + e.slice(pos+2,e.length);
         }
 
   }
