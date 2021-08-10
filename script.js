@@ -18,34 +18,36 @@ function putElement(value){
 
 
 
+function getAnswer(){
+  var e = document.getElementById("result").innerHTML;
+  var ans=0;
+  while(/[/ *]/.test(e))
+  {
+      var pos = e.search(/[/ *]/d);
+      if( e.match(/[/ *]/) =="/" ){
+            ans= Number(e[pos-1])/ Number(e[pos+1]);
+            e = e.slice( 0,pos-1) + ans + e.slice(pos+2,e.length);
+            }
+        else{
+          ans= Number(e[pos-1])*Number(e[pos+1]);
+          e = e.slice( 0,pos-1) + ans + e.slice(pos+2,e.length);
+        }
 
-function check(){
+  }
 
+  while(/[+ -]/.test(e))
+  {
+      var pos = e.search(/[+ -]/d);
+      if( e.match(/[+ -]/) =="+" ){
+            ans= Number(e[pos-1])+Number(e[pos+1]);
+            e = e.slice( 0,pos-1) + ans + e.slice(pos+2,e.length);
+            }
+        else{
+          ans= Number(e[pos-1])-Number(e[pos+1]);
+          e = e.slice( 0,pos-1) + ans + e.slice(pos+2,e.length);
+        }
 
-  var e= document.getElementById('result').innerHTML;
-  pattern = /(\d+)([ / * + -]+)(\d+)([/ * + -]+)/;
-   return pattern.test(e);
-}
+  }
+  console.log(e)
 
-
-
-function solver(oprand){
-    document.getElementById('result').innerHTML += String(oprand);
-    var bool= check()
-    if( bool ){
-      var e= document.getElementById('result').innerHTML;
-      var optr=e.match(/[ / * + -]/g)
-      var pos= e.search(/[ / * + -]/g)
-      var opds=e.match(/\d+/g)
-      var prev= document.getElementById('previous-result').innerHTML;
-      if( prev ){
-
-        document.getElementById("previous-result").innerHTML =Number(prev) +Number(opds[opds.length-1]);
-
-      }else{
-        document.getElementById('previous-result').innerHTML=String( Number(opds[0])+Number(opds[1]))  ;
-
-      }
-
-}
 }
