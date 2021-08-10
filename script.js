@@ -55,5 +55,5 @@ function magnify(){
 }
 
 function getAnswer(){
-   document.getElementById('previous-result').innerHTML = MATH. eval(res.innerHTML)
+   document.getElementById('previous-result').innerHTML = eval(res.innerHTML)
 }
