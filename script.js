@@ -48,6 +48,5 @@ function getAnswer(){
         }
 
   }
-  console.log(e)
-
+  document.getElementById('previous-result').innerHTML = e
 }
