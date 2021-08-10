@@ -55,5 +55,9 @@ function magnify(){
 }
 
 function getAnswer(){
+  if( res.innerHTML=="" ){
+     pre.innerHTML = "0";
+     return
+  }
    document.getElementById('previous-result').innerHTML = eval(res.innerHTML)
 }
