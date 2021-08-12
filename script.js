@@ -46,9 +46,9 @@ function demagnify(){
 
 
 function magnify(){
-   pre.innerHTML = '= ' + pre.innerHTML
-   pre.style.fontSize = "1.6rem"
-   res.style.fontSize = "1.2rem"
+   pre.innerHTML =     (pre.innerHTML[0]!="=") ?  '= ' + pre.innerHTML : pre.innerHTML;
+   pre.style.fontSize = "1.6rem";
+   res.style.fontSize = "1.2rem";
    res.style.opacity =" 0.7";
    pre.style.opacity= "1";
 
